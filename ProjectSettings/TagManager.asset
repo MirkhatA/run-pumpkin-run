@@ -44,9 +44,12 @@ TagManager:
   - name: BG
     uniqueID: 4072086509
     locked: 0
-  - name: Environment
-    uniqueID: 1936963301
+  - name: Obstacles
+    uniqueID: 2170514743
     locked: 0
   - name: Player
     uniqueID: 713749397
+    locked: 0
+  - name: Environment
+    uniqueID: 1936963301
     locked: 0

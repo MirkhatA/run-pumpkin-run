@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_isRunning);
         _isGrounded = IsGrounded();
 
         _animator.SetBool(IsRunningKey, _isRunning);
@@ -35,7 +34,6 @@ public class Player : MonoBehaviour
     public void Move(float direction)
     {
         _isRunning = true;
-        Debug.Log("running");
 
         var xPos = transform.position.x + _speed * direction * Time.deltaTime;
         transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
@@ -59,5 +57,10 @@ public class Player : MonoBehaviour
     private bool IsGrounded()
     {
         return _groundCheckLayer.IsTouchinLayer;
+    }
+
+    public Vector3 GetPosition()
+    {
+        return transform.position;
     }
 }
