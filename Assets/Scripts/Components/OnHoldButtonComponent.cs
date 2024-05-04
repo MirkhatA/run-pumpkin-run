@@ -10,7 +10,6 @@ public class OnHoldButtonComponent : MonoBehaviour, IPointerDownHandler, IPointe
     [SerializeField] private Sprite _pressedSprite;
 
     [SerializeField] private UnityEvent _moveState;
-    [SerializeField] private UnityEvent _defaultState;
 
     private Image _image;
     private bool _isPressed = false;
@@ -30,7 +29,6 @@ public class OnHoldButtonComponent : MonoBehaviour, IPointerDownHandler, IPointe
         else
         {
             _image.sprite = _defaultSprite;
-            _defaultState?.Invoke();
         }
     }
 
